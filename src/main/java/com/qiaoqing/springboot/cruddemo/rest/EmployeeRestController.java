@@ -1,6 +1,5 @@
 package com.qiaoqing.springboot.cruddemo.rest;
 
-import com.qiaoqing.springboot.cruddemo.dao.EmployeeDAO;
 import com.qiaoqing.springboot.cruddemo.entity.Employee;
 import com.qiaoqing.springboot.cruddemo.service.EmployeeService;
 import org.springframework.web.bind.annotation.GetMapping;
