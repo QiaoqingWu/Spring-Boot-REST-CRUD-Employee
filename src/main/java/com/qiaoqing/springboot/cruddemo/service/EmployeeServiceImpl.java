@@ -3,6 +3,7 @@ package com.qiaoqing.springboot.cruddemo.service;
 import com.qiaoqing.springboot.cruddemo.dao.EmployeeDAO;
 import com.qiaoqing.springboot.cruddemo.entity.Employee;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,16 +23,19 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee findById(int theId) {
-        return null;
+        return employeeDAO.findById(theId);
     }
 
+    // put @Transactional because the function modified the database
+    @Transactional
     @Override
     public Employee save(Employee theEmployee) {
-        return null;
+        return employeeDAO.save(theEmployee);
     }
 
+    @Transactional
     @Override
     public void deleteById(int theId) {
-
+        employeeDAO.deleteById(theId);
     }
 }
